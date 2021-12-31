@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promesa facil</title>
+</head>
+<body>
+<b>Nombre del post: </b> <span id="txtNombrePost"></span><br/>
+<b>Esta completo?</b><span id="txtCompleto"<span></span>
+
+    <script>
+async function cargarUrl(url){
+    let respuesta = await fetch(url)  //trae la inforcion de la url
+    return respuesta.json(); // ante una promesa se frena el sistema esperando que esa promesa se resuelva
+}
+
+
+
+async function jsonCargando(){ //ejecuta la funcion
+    //ejemplo
+    let usuariosJson = await cargarUrl('https://jsonplaceholder.typicode.com/usuarios')
+    let json = await cargarUrl('https://jsonplaceholder.typicode.com/todos/1')
+    let nombreCompleto = document.getElementById("txtNombrePost");
+    nombreCompleto.innerHTML = json.title;
+    let estaCompleto = document.getElementById("txtCompleto");
+
+/*     estaCompleto.innerHTML = json.completed? "Esta incompleto": "Esta incompleto"; */
+    if (json.completed){
+        estaCompleto.innerHTML= "Esta completo"
+    }
+    else{
+        estaCompleto.innerHTML= "Esta incompleto"
+    }
+  
+}
+
+jsonCargando()
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+<b>Nombre del post: </b> <span id="txtNombrePost"></span><br/>
+<b>Esta completo?</b><span id="txtCompleto"<span></span>
+
+    <script>
+function cargandoJson(){
+   
+    fetch('https://jsonplaceholder.typicode.com/todos/1')  //trae la inforcion de la url
+    .then(response => response.json()) //con esa informacion depues que la haiga cargado la envia a la fucion json cargado
+    .then(jsonCargando);
+}
+
+
+
+function jsonCargando(json){ //ejecuta la funcion
+    let nombreCompleto = document.getElementById("txtNombrePost");
+    nombreCompleto.innerHTML = json.title;
+    let estaCompleto = document.getElementById("txtCompleto");
+
+/*     estaCompleto.innerHTML = json.completed? "Esta incompleto": "Esta incompleto"; */
+    if (json.completed){
+        estaCompleto.innerHTML= "Esta completo"
+    }
+    else{
+        estaCompleto.innerHTML= "Esta incompleto"
+    }
+  
+}
+
+cargandoJson()
+    </script>
+</body>
+</html>

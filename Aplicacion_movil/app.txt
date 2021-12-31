@@ -1,0 +1,22 @@
+Paso para crear aplicaciones moviles
+
+https://cordova.apache.org/
+instalar node.js
+cd C:\Users\Usuario\Desktop\app
+intalar los siguientes elemento
+-npm install -g cordova
+-cordova create MyApp
+ingreso a la carpeta MyApp
+-cordova platform add android
+compilar para android
+compilar todo esto a una aplicacion de android
+
+luego descargar android studio
+https://developer.android.com/studio
+-cordova build android
+
+si sale error 
+ANDROID_SDK_ROOT=C:\Users\Usuario\Desp\AppData\Local\Android\Sdk\
+ANDROID_HOME
+
+JAVA_HOME=C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\

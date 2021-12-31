@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body{
+        background-color:black;
+    }
+    .reloj {/*Definig font could be useful!*/
+   font-size:4em;
+   color: #FFFFFF;
+   font-family:Arial;
+   }
+    .reloj {
+    text-shadow: 1px 0px 20px #ffd200;
+    -webkit-transition: 1s linear 0s;
+    -moz-transition: 1s linear 0s;
+    -o-transition: 1s linear 0s;
+    transition: 1s linear 0s;
+    outline: 0 none;}
+    </style>
+</head>
+<body>
+    <div class="reloj">10:15:20</div>
+
+    <script>
+setInterval(() => {
+
+    //Acceder al div que contiene el reloj
+   var reloj = document.getElementsByClassName("reloj")[0];
+   var tiempoActual = new Date();
+   var hora = tiempoActual.getHours()
+   if(hora<10){
+       hora = `0${segundo}`
+   }
+   var minuto =tiempoActual.getMinutes();
+   if(minuto<10){
+       minuto = `0${segundo}`
+   }
+   var segundo =tiempoActual.getSeconds();
+   if(segundo<10){
+       segundo= `0${segundo}`
+   }
+   reloj.innerHTML = `${hora}:${minuto}:${segundo}`;
+}, 1000);
+
+    </script>
+</body>
+</html>

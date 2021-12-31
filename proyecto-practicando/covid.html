@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estadistica covid</title>
+</head>
+<body>
+    <div>
+        <h1>Estadistica del COVID19</h1>
+
+        <b>Fecha</b> <input type="date" id="inputFecha"><br />
+        <b>Pais</b>
+        <select id="selectPais">
+        <option value="Spain">Espana</option>
+        <option value="Germany">Alemania</option>
+        </select>
+        <br />
+    
+<button id="btnCargar">Cargar Estadisticas</button>
+<br />
+<ul>
+    <li>today_confirmed <span id="sas"></span></li>
+      <li>  today_deaths: <span id="2"></span></li>
+      <li> today_new_confirmed:<span id="3"></span> </li>
+      <li> today_new_deaths:<span id="4"></span> </li>
+      <li>  today_new_open_cases:<span id="5"></span> </li>
+      <li> today_new_recovered:<span id="6"></span> </li>
+      <li> today_open_cases:<span id="7"></span> </li>
+      <li> today_recovered: <span id="8"></span></li>
+</ul>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

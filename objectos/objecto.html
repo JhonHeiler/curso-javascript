@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objecto</title>
+</head>
+<body>
+
+
+    <script>
+
+        var persona = {
+            "nombre": "heiler",
+            "apellido": "mosquera",
+            "telefono": 323497873,
+            "email": "heylerty7@gmail.com",
+            "direccion": "victoria",
+            //subobjecto
+            "empleo": {
+                "nombre": "programador",
+                "localizacion": "choco"
+            }
+
+        }
+        persona.apellido= "cordoba"
+       console.log(persona)
+       alert(persona.apellido)
+       alert(persona.empleo.nombre)
+    </script>
+</body>
+</html>

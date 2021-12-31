@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo</title>
+</head>
+<body>
+ 
+    <script>
+//arreglos
+        var nombre = ["heiler", "camilo", "juan", "sofia"]
+        alert(nombre)
+        alert(nombre[2])
+
+// otra forma para ingresar valores arreglo
+
+var asignaturas= []
+asignaturas.push("matematica")
+asignaturas.push("etica")
+asignaturas.push("programacion")
+asignaturas.push("filosofia")
+alert(asignaturas)
+//para que me valla mostrando en uno en uno
+for (var i =0; i< asignaturas.length; i++){
+    alert(asignaturas[i]);
+}
+
+// OTRA FORMA DE RECORRER 
+for(asignatura of asignaturas){
+    alert(asignatura)
+}
+    </script>
+</body>
+</html>
